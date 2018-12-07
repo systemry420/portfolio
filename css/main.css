@@ -63,3 +63,66 @@
     display: block;
     margin: auto;
 }
+
+
+
+#about{
+    background: #dedede;
+    color: #111;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#skills{
+    padding: 50px 0;
+}
+
+.skill{
+    width: 90vw;
+    border: 1px solid #777;
+    text-align: center;
+    margin: auto;
+    display: block;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: #fff;
+}
+
+#projects{
+    background: rgba(167, 76, 76, 0.849);
+}
+
+.project{
+    width: 50vw;
+    height: 50vw;
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: 2vh;
+}
+
+.contact{
+    margin: 8vh auto;
+    width: 50vw;
+    text-align: center;
+}
+
+.contact li{
+    display: inline-block;
+    margin-right: 8vw;
+}
+
+.contact li .contact-link{
+    border: 1px solid #111;
+    border-radius: 100%;
+    text-decoration: none;
+    width: 25vh;
+    height: 25vh;
+    color: #111;
+}
+
+
+#html-skill .fill{
+    background: orange;
+    width: 80%;
+}
