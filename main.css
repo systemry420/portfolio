@@ -1,0 +1,51 @@
+/*  TODO:
+        - make tapable elements min-width/height:48px;
+        - use flexbox when needed
+        - 
+
+ */
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+#welcome{
+    background: linear-gradient(#111 35%, rgb(11, 21, 49) 70%, rgb(4, 15, 48));
+    color: aliceblue;
+    height: 100vh;
+}
+
+#nav{
+    height: 8vh;
+    background: #111;
+}
+
+#nav ul, .contact{
+    list-style: none;
+    margin: 0 auto;
+
+}
+
+#nav ul li{
+    margin-top: 3vh;
+    display: inline-block;
+    margin-right: 5vw;
+}
+
+.container{
+    min-height: 625px;
+    padding: 40vh 0;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+#intro{
+    margin-top: 20vh; 
+}
+
