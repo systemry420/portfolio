@@ -1,8 +1,8 @@
 /*  TODO:
-        - fix projects section to fit small devices
-        - fix contact links to include the text
-        - add new breakpoint at 768px to fix nav
         - change divs into semantic elements
+        - add social links, & nav
+        - pay attention to specificity
+        - clean, DRY, comments, & optimization
  */
 
 *{
@@ -29,30 +29,31 @@ h2{
 }
 
 #nav{
-    height: 8vh;
-    margin-left: 10vw;
+    height: 54px;
+    margin: auto;
     max-width: 100%;
 }
  
-
 #nav ul{
     list-style: none;
     display:flex;
+    height: 100%;
 }
 
 #nav ul li{
     /* display: inline-block; */
     width: 12vw;
-    margin-left: 6vw;
+    margin: auto;
 }
 
 .container{
-    min-height: 100vh;
-    padding: 4vh 0;
+    min-height: 100%;
+    padding: 10% 0;
 }
 
 .nav-link{
     width: 100%;
+    height: 100%;
     font-size: 1.2em;
     letter-spacing: 5px;
     text-decoration: none;
@@ -61,7 +62,6 @@ h2{
     color: aliceblue;
     padding: 1em;
     text-transform: uppercase;
-    border-bottom: 2px solid #eee;
 }
 
 #nav ul li:hover{
@@ -72,28 +72,23 @@ h2{
 /* ===== intro section ===== */
 
 #intro{
-    width: 60%;
-    opacity: 0.77;
-    margin: 0vh auto;
-    height: 100%;
-    position: relative;
-    top: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20vh;
 }
 
 img#profile{
-    position: relative;
-    top: 25%;
-    left: 40%;
-    width: 12vw;
-    height: 12vw;
+    width: 15vw;
+    height: 15vw;
     border-radius: 50%;
-    opacity: 0.98;
-    margin: 10vh auto;
+    opacity: 0.7;
+    margin: auto;
 }
 
 #title{
     text-align: center;
-    margin-top: 10vh;
+    margin-top: 5%;
 }
 
 #title span{
@@ -113,7 +108,9 @@ img#profile{
 }
 
 #about p{
-    font-size: 1.4em;
+    font-size: 1.8em;
+    width: 80%;
+    margin: auto;
 }
 /* ===== skills container ===== */
 
@@ -126,7 +123,7 @@ img#profile{
 }
 
 #skills .skill{
-    width: 70vw;
+    width:90%;
     border: 1px solid #111;
     text-align: center;
     margin: 3vh auto;
@@ -140,11 +137,12 @@ img#profile{
 }
 
 .skill .progress{
+    opacity: 0.8;
     border-radius: 30px;
     height: 100%;
     letter-spacing: 1px;
     font-size: 1.2em;
-    background-image: linear-gradient(to right, #0073a8, rgb(126, 11, 30));
+    background-image: linear-gradient(to right, #0084c29f, #e00025);
 }
 
 /* ===== start projects section ===== */
@@ -162,12 +160,13 @@ img#profile{
 .wrapper{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .project-tile{
-    width: calc((100% - 200px) /3);
+    max-width: 90%;
     height: 10%;
-    border-radius: 5%;
+    border-radius: 5%; 
     margin: 4vh;
     text-align: center;
     overflow: hidden;
@@ -203,14 +202,13 @@ img#profile{
     display: inline-block;
     padding: 1vw;
     text-align: center;
-    color: #111;
+    color: #555;
     font-weight: bold;
+    font-size: 0.9em;
     margin: 1vh;
     border-radius: 5%;
     border: 1px solid #999;
 }
-
-
 
 /* ===== social section ===== */
 
@@ -219,7 +217,7 @@ img#profile{
     background-color: #050723;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23000000' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%231121b2'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
     min-height: 250px;
-    padding: 2vw;
+    padding: 1vw;
 }
 
 #social h2{
@@ -234,70 +232,57 @@ ul.contact{
 
 ul.contact li{
     display: inline-block;
-    width: 20% - 100px;
+    width: 20%;
     margin: 0 10vh 10vh 0;
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
-a.fa{
-    color: #f1f1f1;
-    border-radius: 100%;
+ul.contact li a{
     text-decoration: none;
     padding: 1em;
+}
+
+ul.contact li a:hover {
+    opacity: 0.8;
+}
+
+i.fa{
+    color: #f1f1f1;
     font-size: 3em;
+    margin: auto;
 }
 
 .contact span{
     color: aliceblue;
+    text-align: center;
 }
 
-a.fa:hover {
-    opacity: 0.8;
-}
 
 /* ===== media query ===== */
 
-@media screen and (min-width: 300px) and (max-width: 424px){
+@media screen and (max-width: 600px){
     #nav ul{
         display: none;
     }
 
-    .container, #welcome, #intro, #about, #skills, #projects, #social, #title,.fill{
-        max-width: 100%;
-        padding: 10px 0;
-        margin: 0;
-    }
-
-    #intro, img#profile, #title{
-        margin: 0 auto;
-    }
-
-    #intro{
-        width: 50%;
-    }
-
     img#profile{
-        width: 20vw;
-        height: 20vw;
-        position: relative;
-        left: 30%;
+        width: 30vw;
+        height: 30vw;
     }
 
     #title{
         font-size: 0.9em;
     }
 
-    .skill{
-        width: 80%;
-        height: 25px;
-        margin: 20px auto;
-        font-size: 0.7em;
+    #skills .skill{
+        height: 6vh;
+        margin: 3vh auto;
+        font-size: 0.6em;
     }
 
     #about p.para{
-        width: 90%;
-        margin: auto;
-        font-size: 0.9em;
+        font-size: 12pt;
+        line-height: 1.5;
     }
 
     h1, h2{
@@ -305,26 +290,60 @@ a.fa:hover {
         margin: 5vh 0;
     }
 
-    #projects{
-        height: auto;
+    .wrapper{
+        flex-direction: column;
     }
 
-    .project-tile{
-
-    }
-    
     ul.contact li{
         display: block;
         margin: 25px auto;
     }
 
-    ul.contact li a{
-        margin: -20px auto;
-        padding: 20px 0;
-        font-size: 1.4em;
+    ul.contact span{
+        font-size: 0.6em;
+    }
+
+    i.fa{
+        font-size: 1.5em;
     }
 }
 
-@media screen and (min-width: 425px) and (max-width: 768px){
+@media screen and (min-width: 601px) and (max-width: 768px){
+    #nav ul{
+        margin: 0 auto;
+    }
 
+    .project-tile{
+        width: 80%;
+    }
+    #nav ul li{
+        border-bottom: none;
+        width: 25%;
+    }
+
+    .nav-link{
+        font-size: 1em;
+        letter-spacing: 2px;
+    }
+
+    img#profile{
+        width: 25vw;
+        height: 25vw;
+    }
+
+    #title{
+        font-size: 1.2em;
+    }
+
+    #about p.para{
+        font-size: 1.2em;
+    }
+
+    ul.contact li{
+        margin: 0;
+    }
+
+    i.fa{
+        font-size: 2em;
+    }
 }
