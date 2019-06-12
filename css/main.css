@@ -195,16 +195,16 @@ section#projects h2 {
 }
 
 article.project-tile {
-    width: 90%;
+    min-width: calc(100%/3-50);
     height: 10%;
-    border-radius: 3%;
-    margin: 4vh;
+    border-radius: 10px;
+    margin: 3vh;
     text-align: center;
     overflow: hidden;
     background: #f1f1f1;
     color: #333;
     border: 1px solid #aaa;
-    box-shadow: 2px 2px 3px 2px #999;
+    box-shadow: 0 0 4px 4px #777;
 }
 
 .project-heading {
@@ -268,7 +268,7 @@ ul.contact {
 
 ul.contact li {
     display: inline-block;
-    width: 20%;
+    width: 15%;
     margin: 0 10vh 10vh 0;
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
@@ -344,7 +344,7 @@ i.fa {
 
     /* solution for project tile width */
     article.project-tile {
-        width: 60%;
+        width: calc(100%/2-20);
     }
 }
 
@@ -373,6 +373,7 @@ i.fa {
 
     #title {
         font-size: 1.2em;
+        padding-top: 3vh;
     }
 
     section#about article.para p {
@@ -446,6 +447,7 @@ i.fa {
 
     #title {
         font-size: 0.9em;
+        padding-top: 5vh;
     }
 
     section#about article.para p {
@@ -455,12 +457,13 @@ i.fa {
 
     section#skills .skill {
         height: 6vh;
-        margin: 3vh auto;
+        margin: 2vh auto;
         font-size: 0.8em;
     }
 
     article.project-tile {
         margin: 2vh auto;
+        width: 95%;
     }
 
     h1, h2 {
